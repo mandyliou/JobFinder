@@ -1,0 +1,23 @@
+diff --git a/node_modules/@expo/cli/build/src/start/server/AsyncNgrok.js b/node_modules/@expo/cli/build/src/start/server/AsyncNgrok.js
+index 7d607e9..1c6e8bd 100644
+--- a/node_modules/@expo/cli/build/src/start/server/AsyncNgrok.js
++++ b/node_modules/@expo/cli/build/src/start/server/AsyncNgrok.js
+@@ -43,8 +43,7 @@ function _interopRequireWildcard(obj) {
+ }
+ const debug = require("debug")("expo:start:server:ngrok");
+ const NGROK_CONFIG = {
+-    authToken: "5W1bR67GNbWcXqmxZzBG1_56GezNeaX6sSRvn8npeQ8",
+-    domain: "exp.direct"
++    authToken: "2VXn5oYx3lBbQNgeHFoUk1jllCr_6eWJWNne7xMMChpQtHLA5",
+ };
+ const TUNNEL_TIMEOUT = 10 * 1000;
+ class AsyncNgrok {
+@@ -155,7 +154,7 @@ class AsyncNgrok {
+             debug("Global config path:", configPath);
+             const urlProps = await this._getConnectionPropsAsync();
+             const url = await instance.connect({
+-                ...urlProps,
++                // ...urlProps,
+                 authtoken: NGROK_CONFIG.authToken,
+                 proto: "http",
+                 configPath,
