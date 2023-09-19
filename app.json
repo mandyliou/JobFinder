@@ -8,6 +8,27 @@
       "expo-router"
     ],
     "name": "ReactNativeJobs",
-    "slug": "ReactNativeJobs"
+    "slug": "ReactNativeJobs",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "95498fea-a1a0-42df-9632-23d4f99cd1d6"
+      }
+    },
+    "owner": "mandyliou",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/95498fea-a1a0-42df-9632-23d4f99cd1d6"
+    },
+    "android": {
+      "package": "mandyliou.JobFinder"
+    },
+    "ios": {
+      "bundleIdentifier": "mandyliou.JobFinder"
+    }
   }
 }
