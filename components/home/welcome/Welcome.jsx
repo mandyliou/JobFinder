@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { 
-  View, 
+import {
+  View,
   Text,
   TextInput,
   TouchableOpacity,
   Image,
-  FlatList 
+  FlatList
 } from 'react-native';
 import { useRouter } from 'expo-router';
 
@@ -17,13 +17,14 @@ const jobTypes = ["Full-time", "Part-time", "Contractor"]
 const Welcome = () => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState('Full-time');
-  
+
   return (
     <View>
       <View style={styles.container}>
-        <Text styles={styles.userName}>Hello Mandy</Text>   
-        <Text styles={styles.welcomeMessage}>Find your perfect job</Text>
+        <Text style={styles.userName}>Hello Mandy</Text>
+        <Text style={styles.welcomeMessage}>Find your perfect job</Text>
       </View>
+
 
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
@@ -35,17 +36,17 @@ const Welcome = () => {
           />
         </View>
 
-        <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
+        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
           <Image
             source={icons.search}
             resizeMode='contain'
             style={styles.searchBtnImage}
-          />  
+          />
         </TouchableOpacity>
       </View>
 
       <View style={styles.tabsContainer}>
-        <FlatList 
+        <FlatList
           data={jobTypes}
           renderItem={({item}) => (
             <TouchableOpacity
@@ -61,7 +62,7 @@ const Welcome = () => {
             keyExtractor={item => item}
             contentContainerStyle={{columnGap: SIZES.small }}
             horizontal
-        /> 
+        />
       </View>
     </View>
   )
